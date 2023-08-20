@@ -1,0 +1,15 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+} 
+
+.navbar {
+  background-color: #e0e3d7 !important; 
+}
+
+.navbar-brand {
+  font-size: 3rem;
+}
+
+.dropdown-menu {
+  background-color: #e0e3d7 !important; 
+}
