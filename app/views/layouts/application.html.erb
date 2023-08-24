@@ -9,6 +9,32 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style type="text/css"> 
+      .jumbotron {
+        margin-top: 45px;
+        padding-top: 260px;
+        background-image: url('assets/retrosupply-jLwVAUtLOAQ-unsplash.jpg'); /* Use asset-url helper */
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 550px;
+        border-radius: 50px;
+      }
+
+      html,
+        body {
+          height: 100%;
+        }
+
+        #page-content {
+          flex: 1 0 auto;
+          background-color: lightgray;
+        }
+
+        #sticky-footer {
+          flex-shrink: none;
+      }
+    </style>
   </head>
 
   <body class="d-flex flex-column">
