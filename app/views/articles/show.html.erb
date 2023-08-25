@@ -5,7 +5,7 @@
     <div class="col col-lg-8">
       <div class="card text-center shadow mb-5 bg-white rounded">
         <div class="card-header fst-italic" >
-          By Shafiqullah Qasemi
+          By <%= @article.user.username if @article.user %> 
         </div>
         <div class="card-body">
           <div class="card-text text-start"><td><%= simple_format(@article.description) %></td></div>
