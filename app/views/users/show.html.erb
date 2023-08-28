@@ -8,7 +8,15 @@
 
 <h3 class="text-center mt-4">Articles</h3> 
 
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div> 
+
 <%= render 'articles/article' %> 
+
+<div class="flickr_pagination mb-5">
+  <%= will_paginate @articles, :container => false %>
+</div> 
 
 <div class="d-flex justify-content-center">
      <%= link_to 'Return to list of Bloggers', users_path, class: "mb-5 btn btn-success btn-lg btn-block" %> 
