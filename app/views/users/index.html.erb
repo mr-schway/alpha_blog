@@ -18,7 +18,9 @@
             </h5>
             <p class="card-text"><%= pluralize(user.articles.count, "article") %></p> 
             <%= link_to "View profile", user, class: "btn btn-outline-success" %> 
-            <%= link_to "Edit profile", edit_user_path(user), class: "btn btn-outline-secondary" %> 
+            <% if logged_in? && user == current_user %> 
+              <%= link_to "Edit profile", edit_user_path(user), class: "btn btn-outline-secondary" %> 
+            <% end %> 
           </div> 
           <div class="card-footer text-muted"> 
             <small>Joined <%= time_ago_in_words(user.created_at) %> ago</small> 
@@ -32,3 +34,4 @@
 <div class="flickr_pagination mb-5">
   <%= will_paginate @users, :container => false %>
 </div> 
+https://stackoverflow.com/questions/1426826/difference-between-and-and-in-ruby#:~:text=and%20is%20the%20same%20as,%22Avoiding%20Double%20Render%20Errors%22.
