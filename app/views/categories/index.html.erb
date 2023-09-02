@@ -9,7 +9,8 @@
       <div class="col col-lg-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
           <div class="card-body">
-            <h5 class="card-title fw-bold"><%= link_to category.name, category_path(category), class: "text-success link-offset-2 link-underline link-underline-opacity-0" %></h5>
+            <h5 class="card-title fw-bold"><%= link_to category.name, category_path(category), class: "text-success text-decoration-none" %></h5> 
+            <p class="card-text"><%= pluralize(category.articles.count, "article") %></p> 
           </div>
           <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(category.created_at) %> ago, 
